@@ -1,6 +1,7 @@
 package com.boye.games.linethree.client;
 
 import static com.boye.games.linethree.client.Consts.BOARD_SIDE;
+import static com.boye.games.linethree.client.Consts.PIECE_DIAMETER;
 
 import com.google.gwt.canvas.client.Canvas;
 import com.google.gwt.canvas.dom.client.Context2d;
@@ -50,5 +51,11 @@ public class LineThree implements EntryPoint {
 		context.moveTo(BOARD_SIDE, 0);
 		context.lineTo(0, BOARD_SIDE);
 		context.stroke();
+		// red piece 1
+		//context.setFillStyle(color);
+		context.beginPath();
+		context.arc(0, 0, PIECE_DIAMETER/2, 0, Math.PI * 2.0, true);
+		context.closePath();
+		context.fill();
 	}
 }
