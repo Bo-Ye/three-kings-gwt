@@ -5,6 +5,7 @@ import static com.boye.games.linethree.client.Consts.PIECE_DIAMETER;
 
 import com.google.gwt.canvas.client.Canvas;
 import com.google.gwt.canvas.dom.client.Context2d;
+import com.google.gwt.canvas.dom.client.CssColor;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.user.client.ui.RootPanel;
 
@@ -27,34 +28,49 @@ public class LineThree implements EntryPoint {
 		Context2d context = canvas.getContext2d();
 		// line 1
 		context.beginPath();
-		context.moveTo(0, 0);
-		context.lineTo(BOARD_SIDE, 0);
+		context.moveTo(PIECE_DIAMETER / 2, PIECE_DIAMETER / 2);
+		context.lineTo(BOARD_SIDE - PIECE_DIAMETER / 2, PIECE_DIAMETER / 2);
 		// line 2
-		context.moveTo(0, BOARD_SIDE);
-		context.lineTo(BOARD_SIDE, BOARD_SIDE);
+		context.moveTo(PIECE_DIAMETER / 2, BOARD_SIDE - PIECE_DIAMETER / 2);
+		context.lineTo(BOARD_SIDE - PIECE_DIAMETER / 2, BOARD_SIDE - PIECE_DIAMETER / 2);
 		// line 3
-		context.moveTo(0, 0);
-		context.lineTo(0, BOARD_SIDE);
+		context.moveTo(PIECE_DIAMETER / 2, PIECE_DIAMETER / 2);
+		context.lineTo(PIECE_DIAMETER / 2, BOARD_SIDE - PIECE_DIAMETER / 2);
 		// line 4
-		context.moveTo(BOARD_SIDE, 0);
-		context.lineTo(BOARD_SIDE, BOARD_SIDE);
+		context.moveTo(BOARD_SIDE - PIECE_DIAMETER / 2, PIECE_DIAMETER / 2);
+		context.lineTo(BOARD_SIDE - PIECE_DIAMETER / 2, BOARD_SIDE - PIECE_DIAMETER / 2);
 		// line 5
-		context.moveTo(0, BOARD_SIDE / 2);
-		context.lineTo(BOARD_SIDE, BOARD_SIDE / 2);
+		context.moveTo(PIECE_DIAMETER / 2, BOARD_SIDE / 2);
+		context.lineTo(BOARD_SIDE - PIECE_DIAMETER / 2, BOARD_SIDE / 2);
 		// line 6
-		context.moveTo(BOARD_SIDE / 2, 0);
-		context.lineTo(BOARD_SIDE / 2, BOARD_SIDE);
+		context.moveTo(BOARD_SIDE / 2, PIECE_DIAMETER / 2);
+		context.lineTo(BOARD_SIDE / 2, BOARD_SIDE - PIECE_DIAMETER / 2);
 		// line 7
-		context.moveTo(0, 0);
-		context.lineTo(BOARD_SIDE, BOARD_SIDE);
+		context.moveTo(PIECE_DIAMETER / 2, PIECE_DIAMETER / 2);
+		context.lineTo(BOARD_SIDE - PIECE_DIAMETER / 2, BOARD_SIDE - PIECE_DIAMETER / 2);
 		// line 8
-		context.moveTo(BOARD_SIDE, 0);
-		context.lineTo(0, BOARD_SIDE);
+		context.moveTo(BOARD_SIDE - PIECE_DIAMETER / 2, PIECE_DIAMETER / 2);
+		context.lineTo(PIECE_DIAMETER / 2, BOARD_SIDE - PIECE_DIAMETER / 2);
 		context.stroke();
-		// red piece 1
-		//context.setFillStyle(color);
+		//
 		context.beginPath();
-		context.arc(0, 0, PIECE_DIAMETER/2, 0, Math.PI * 2.0, true);
+		context.setFillStyle(CssColor.make(255, 0, 0));
+		// red piece 1
+		context.arc(PIECE_DIAMETER / 2, PIECE_DIAMETER / 2, PIECE_DIAMETER / 2, 0, Math.PI * 2.0, true);
+		// red piece 2
+		context.arc(BOARD_SIDE / 2, PIECE_DIAMETER / 2, PIECE_DIAMETER / 2, 0, Math.PI * 2.0, true);
+		// red piece 3
+		context.arc(BOARD_SIDE - PIECE_DIAMETER / 2, PIECE_DIAMETER / 2, PIECE_DIAMETER / 2, 0, Math.PI * 2.0, true);
+		context.closePath();
+		context.fill();
+		context.beginPath();
+		context.setFillStyle(CssColor.make(0, 255, 0));
+		// green piece 1
+		context.arc(PIECE_DIAMETER / 2, BOARD_SIDE - PIECE_DIAMETER / 2, PIECE_DIAMETER / 2, 0, Math.PI * 2.0, true);
+		// green piece 2
+		context.arc(BOARD_SIDE / 2, BOARD_SIDE - PIECE_DIAMETER / 2, PIECE_DIAMETER / 2, 0, Math.PI * 2.0, true);
+		// green piece 3
+		context.arc(BOARD_SIDE - PIECE_DIAMETER / 2, BOARD_SIDE - PIECE_DIAMETER / 2, PIECE_DIAMETER / 2, 0, Math.PI * 2.0, true);
 		context.closePath();
 		context.fill();
 	}
