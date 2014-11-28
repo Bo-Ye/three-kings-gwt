@@ -25,44 +25,30 @@ public class LineThree implements EntryPoint {
 		//
 		Context2d context = canvas.getContext2d();
 		// line 1
-		//context.beginPath();
+		context.beginPath();
 		context.moveTo(0, 0);
 		context.lineTo(BOARD_SIDE, 0);
-		//context.stroke();
 		// line 2
-		//context.beginPath();
 		context.moveTo(0, BOARD_SIDE);
 		context.lineTo(BOARD_SIDE, BOARD_SIDE);
-		//context.stroke();
 		// line 3
-		//context.beginPath();
 		context.moveTo(0, 0);
 		context.lineTo(0, BOARD_SIDE);
-		//context.stroke();
 		// line 4
-		//context.beginPath();
 		context.moveTo(BOARD_SIDE, 0);
 		context.lineTo(BOARD_SIDE, BOARD_SIDE);
-		//context.stroke();
 		// line 5
-		//context.beginPath();
 		context.moveTo(0, BOARD_SIDE / 2);
 		context.lineTo(BOARD_SIDE, BOARD_SIDE / 2);
-		//context.stroke();
 		// line 6
-		//context.beginPath();
 		context.moveTo(BOARD_SIDE / 2, 0);
 		context.lineTo(BOARD_SIDE / 2, BOARD_SIDE);
-		//context.stroke();
 		// line 7
-		//context.beginPath();
 		context.moveTo(0, 0);
 		context.lineTo(BOARD_SIDE, BOARD_SIDE);
-		//context.stroke();
 		// line 8
-		//context.beginPath();
 		context.moveTo(BOARD_SIDE, 0);
 		context.lineTo(0, BOARD_SIDE);
-		//context.stroke();
+		context.stroke();
 	}
 }
