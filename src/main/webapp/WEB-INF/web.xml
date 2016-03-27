@@ -7,7 +7,7 @@
 
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>LineThree.html</welcome-file>
+    <welcome-file>ThreeKings.html</welcome-file>
   </welcome-file-list>
 
 </web-app>

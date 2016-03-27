@@ -1,7 +1,7 @@
-package com.boye.games.linethree.client;
+package com.boye.threekings.gwt.client;
 
-import static com.boye.games.linethree.client.Consts.BOARD_SIDE;
-import static com.boye.games.linethree.client.Consts.PIECE_DIAMETER;
+import static com.boye.threekings.gwt.client.Consts.BOARD_SIDE;
+import static com.boye.threekings.gwt.client.Consts.PIECE_DIAMETER;
 
 import com.google.gwt.canvas.client.Canvas;
 import com.google.gwt.canvas.dom.client.Context2d;
@@ -11,7 +11,7 @@ import com.google.gwt.user.client.ui.RootPanel;
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
  */
-public class LineThree implements EntryPoint {
+public class ThreeKings implements EntryPoint {
 	private Context2d context;
 
 	private void initBoard() {
@@ -91,7 +91,7 @@ public class LineThree implements EntryPoint {
 		canvas.setCoordinateSpaceWidth(BOARD_SIDE);
 		canvas.setHeight(BOARD_SIDE + "px");
 		canvas.setCoordinateSpaceHeight(BOARD_SIDE);
-		RootPanel.get("lineThreeContainer").add(canvas);
+		RootPanel.get("ThreeKingsContainer").add(canvas);
 		//
 		context = canvas.getContext2d();
 		initBoard();

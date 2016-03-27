@@ -1,4 +1,4 @@
-package com.boye.games.linethree.client;
+package com.boye.threekings.gwt.client;
 
 //@formatter:off
 /**

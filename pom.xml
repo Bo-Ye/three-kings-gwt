@@ -6,7 +6,7 @@
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.boye</groupId>
-  <artifactId>games-gwt</artifactId>
+  <artifactId>three-kings-gwt</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>GWT Maven Archetype</name>
@@ -80,9 +80,9 @@
         <!-- Plugin configuration. There are many available options, see 
           gwt-maven-plugin documentation at codehaus.org -->
         <configuration>
-          <runTarget>LineThree.html</runTarget>
+          <runTarget>ThreeKings.html</runTarget>
           <modules>
-            <module>com.boye.games.linethree.LineThree</module>
+            <module>com.boye.threekings.gwt.ThreeKings</module>
           </modules>
         </configuration>
       </plugin>

@@ -1,4 +1,4 @@
-package com.boye.games.linethree.client;
+package com.boye.threekings.gwt.client;
 
 import com.google.gwt.canvas.dom.client.Context2d;
 import com.google.gwt.canvas.dom.client.CssColor;

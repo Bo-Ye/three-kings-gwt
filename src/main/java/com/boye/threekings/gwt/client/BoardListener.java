@@ -1,4 +1,4 @@
-package com.boye.games.linethree.client;
+package com.boye.threekings.gwt.client;
 
 import com.google.gwt.event.dom.client.MouseDownEvent;
 import com.google.gwt.event.dom.client.MouseDownHandler;
